@@ -33,6 +33,9 @@ use Symfony\Component\Mime\Part\DataPart;
 use Symfony\Component\Validator\Constraints\NotBlank;
 use Symfony\Component\Validator\Constraints\Type;
 
+/**
+ * @phpstan-import-type MailData from AbstractMailFactory
+ */
 #[Package('after-sales')]
 class MailService extends AbstractMailService
 {
@@ -124,8 +127,8 @@ class MailService extends AbstractMailService
         }
 
         $this->eventDispatcher->dispatch(new MailSentEvent(
-            $data['subject'],
-            $data['recipients'],
+            $data['subject'] ?? '',
+            $data['recipients'] ?? [],
             ['text/html' => $mail->getHtmlBody(), 'text/plain' => $mail->getTextBody()],
             $context,
             $templateData['eventName'] ?? null,
@@ -148,12 +151,12 @@ class MailService extends AbstractMailService
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param MailData $data
      * @param array<string, mixed> $templateData
      */
     private function createMail(array &$data, array $templateData, Context $context): ?Email
     {
-        $testMode = $this->systemConfigService->getBool(SetupStagingEvent::CONFIG_FLAG) || !empty($data['testMode']);
+        $testMode = $this->systemConfigService->getBool(SetupStagingEvent::CONFIG_FLAG) || ($data['testMode'] ?? false);
 
         $salesChannel = $this->getSalesChannel($data, $templateData, $context);
 
@@ -178,17 +181,19 @@ class MailService extends AbstractMailService
 
         if ($testMode) {
             $this->templateRenderer->enableTestMode();
-            if (\is_array($templateData['order'] ?? []) && empty($templateData['order']['deepLinkCode'])) {
+            if (\is_array($templateData['order'] ?? [])
+                && (!isset($templateData['order']['deepLinkCode']) || !\is_string($templateData['order']['deepLinkCode']) || $templateData['order']['deepLinkCode'] === '')
+            ) {
                 $templateData['order']['deepLinkCode'] = 'home';
             }
         }
         $mailOptions = ['subject'];
-        if (\is_string($data['senderName'])) {
+        if (\is_string($data['senderName'] ?? null)) {
             $mailOptions[] = 'senderName';
         }
         foreach ($mailOptions as $renderDataIndex) {
             try {
-                $data[$renderDataIndex] = $this->templateRenderer->render($data[$renderDataIndex], $templateData, $context, false);
+                $data[$renderDataIndex] = $this->templateRenderer->render($data[$renderDataIndex] ?? '', $templateData, $context, false);
             } catch (\Throwable $e) {
                 $this->mailError(
                     \sprintf(
@@ -198,7 +203,7 @@ class MailService extends AbstractMailService
                     ),
                     $context,
                     $templateData,
-                    $data[$renderDataIndex],
+                    $data[$renderDataIndex] ?? null,
                     $e,
                     Level::Warning,
                 );
@@ -208,8 +213,8 @@ class MailService extends AbstractMailService
         }
 
         // Validated through data validator
-        \assert(\is_string($data['contentHtml']));
-        \assert(\is_string($data['contentPlain']));
+        \assert(\is_string($data['contentHtml'] ?? null));
+        \assert(\is_string($data['contentPlain'] ?? null));
 
         $contents = [];
         foreach ($this->buildContents($data, $salesChannel) as $index => $template) {
@@ -236,7 +241,7 @@ class MailService extends AbstractMailService
         $mail = $this->mailFactory->create(
             $data['subject'],
             [$senderEmail => $data['senderName']],
-            $data['recipients'],
+            $data['recipients'] ?? [],
             $contents,
             $this->getMediaUrls($data, $context),
             $data,
@@ -252,8 +257,9 @@ class MailService extends AbstractMailService
             $headers = $mail->getHeaders();
             $headers->addTextHeader('X-Shopware-Language-Id', $context->getLanguageId());
 
-            if (!empty($templateData['eventName'])) {
-                $headers->addTextHeader('X-Shopware-Event-Name', $templateData['eventName']);
+            $eventName = $templateData['eventName'] ?? '';
+            if (\is_string($eventName) && $eventName !== '') {
+                $headers->addTextHeader('X-Shopware-Event-Name', $eventName);
             }
             if ($salesChannel instanceof SalesChannelEntity) {
                 $headers->addTextHeader('X-Shopware-Sales-Channel-Id', $salesChannel->getId());
@@ -285,7 +291,7 @@ class MailService extends AbstractMailService
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param MailData $data
      */
     private function getSender(array $data, ?string $salesChannelId): string
     {
@@ -310,7 +316,7 @@ class MailService extends AbstractMailService
     /**
      * Attaches header and footer to given email bodies
      *
-     * @param array{contentPlain: string, contentHtml: string} $data
+     * @param array{contentPlain: string, contentHtml: string, ...} $data
      *
      * @return array{'text/plain': string, 'text/html': string} e.g. ['text/plain' => '{{foobar}}', 'text/html' => '<h1>{{foobar}}</h1>']
      */
@@ -328,13 +334,14 @@ class MailService extends AbstractMailService
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param MailData $data
      *
      * @return list<string>
      */
     private function getMediaUrls(array $data, Context $context): array
     {
-        if (empty($data['mediaIds'])) {
+        $mediaIds = $data['mediaIds'] ?? [];
+        if ($mediaIds === []) {
             return [];
         }
         $criteria = new Criteria($data['mediaIds']);
@@ -353,7 +360,7 @@ class MailService extends AbstractMailService
     }
 
     /**
-     * @param array<string, mixed> $data
+     * @param MailData $data
      * @param array<string, mixed> $templateData
      */
     private function getSalesChannel(array $data, array $templateData, Context $context): ?SalesChannelEntity

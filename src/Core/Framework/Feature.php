@@ -9,7 +9,7 @@ use Shopware\Core\Framework\Log\Package;
 use Shopware\Core\Framework\Script\Debugging\ScriptTraces;
 
 /**
- * @phpstan-type FeatureFlagConfig array{name?: string, default?: boolean, major?: boolean, description?: string, active?: bool, static?: bool}
+ * @phpstan-type FeatureFlagConfig array{name?: string, default?: boolean, major?: boolean, description?: string, active?: bool, static?: bool, toggleable?: bool, type?: string}
  */
 #[Package('framework')]
 class Feature
@@ -22,7 +22,7 @@ class Feature
     public static bool $emitDeprecations = true;
 
     /**
-     * @var array<bool>
+     * @var array<string, true>
      */
     private static array $silent = [];
 
@@ -266,11 +266,19 @@ class Feature
 
     public static function triggerDeprecationOrThrow(string $majorFlag, string $message, ?string $introducedIn = null): void
     {
-        if (!self::$emitDeprecations || !empty(self::$silent[$majorFlag])) {
+        if (!self::$emitDeprecations) {
             return;
         }
 
-        if (self::isActive($majorFlag) || (self::$registeredFeatures !== [] && !self::has($majorFlag))) {
+        if (isset(self::$silent[$majorFlag])) {
+            return;
+        }
+
+        if (self::isActive($majorFlag)) {
+            throw FeatureException::error('Tried to access deprecated functionality: ' . $message);
+        }
+
+        if (self::$registeredFeatures !== [] && !self::has($majorFlag)) {
             throw FeatureException::error('Tried to access deprecated functionality: ' . $message);
         }
 
