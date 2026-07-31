@@ -155,9 +155,11 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-product', () => {
                     'sw-select-base': await wrapTestComponent('sw-select-base'),
                     'sw-single-select': await wrapTestComponent('sw-single-select'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-textarea-field': await wrapTestComponent('sw-textarea-field'),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                     'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -170,12 +172,14 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-product', () => {
                     'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                     'sw-select-result': await wrapTestComponent('sw-select-result'),
                     'sw-popover': await wrapTestComponent('sw-popover'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                     'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
                     'sw-price-field': await wrapTestComponent('sw-price-field'),
                     'sw-inherit-wrapper': await wrapTestComponent('sw-inherit-wrapper'),
                     'sw-select-selection-list': await wrapTestComponent('sw-select-selection-list'),
                     'sw-bulk-edit-save-modal': await wrapTestComponent('sw-bulk-edit-save-modal'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-switch-field-deprecated.
                     'sw-switch-field-deprecated': await wrapTestComponent('sw-switch-field-deprecated'),
                     'sw-bulk-edit-product-visibility': true,
                     'sw-product-visibility-select': true,
@@ -195,6 +199,7 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-product', () => {
                     'sw-category-tree-field': true,
                     'sw-bulk-edit-product-media': true,
                     'sw-tabs': await wrapTestComponent('sw-tabs'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                     'sw-tabs-item': {
                         template: '<div><slot></slot></div>',

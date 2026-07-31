@@ -47,6 +47,7 @@ async function createWrapper() {
         global: {
             stubs: {
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-loader': true,
                 'sw-modal': await wrapTestComponent('sw-modal'),

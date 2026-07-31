@@ -255,6 +255,7 @@ async function createWrapper(props = defaultProps, provide = {}, { featureActive
             stubs: {
                 'sw-button-process': await wrapTestComponent('sw-button-process'),
                 'sw-tabs': await wrapTestComponent('sw-tabs'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                 'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                 'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                 'mt-tabs': {
@@ -284,6 +285,7 @@ async function createWrapper(props = defaultProps, provide = {}, { featureActive
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                 'sw-select-result': await wrapTestComponent('sw-select-result'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 // CHANGE REASON: Preserve duplicate-action slots when the v6.8 popover uses mt-floating-ui. @harness
                 'mt-floating-ui': {

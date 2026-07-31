@@ -166,15 +166,19 @@ async function createWrapper(privileges = [], options = {}) {
         Object.assign(stubs, {
             'sw-label': await wrapTestComponent('sw-label'),
             'sw-tabs': await wrapTestComponent('sw-tabs'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
             'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
             'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
             'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer', { sync: true }),
             'sw-text-field': await wrapTestComponent('sw-text-field'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
             'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
             'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
             'sw-number-field': await wrapTestComponent('sw-number-field'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-number-field-deprecated.
             'sw-number-field-deprecated': await wrapTestComponent('sw-number-field-deprecated', { sync: true }),
             'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
             'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
             'sw-entity-multi-select': true,
             'sw-block-field': await wrapTestComponent('sw-block-field', { sync: true }),
@@ -187,12 +191,14 @@ async function createWrapper(privileges = [], options = {}) {
             'sw-select-result': await wrapTestComponent('sw-select-result'),
             'sw-select-selection-list': await wrapTestComponent('sw-select-selection-list'),
             'sw-popover': await wrapTestComponent('sw-popover'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
             'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
             'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
             'sw-media-field': await wrapTestComponent('sw-media-field'),
             'sw-media-media-item': await wrapTestComponent('sw-media-media-item'),
             'sw-media-base-item': await wrapTestComponent('sw-media-base-item'),
             'sw-media-preview-v2': await wrapTestComponent('sw-media-preview-v2'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-colorpicker-deprecated.
             'sw-colorpicker-deprecated': await wrapTestComponent('sw-text-field-deprecated'),
             'sw-upload-listener': true,
             'sw-simple-search-field': true,
@@ -204,6 +210,7 @@ async function createWrapper(privileges = [], options = {}) {
             },
             'sw-skeleton': await wrapTestComponent('sw-skeleton'),
             'sw-skeleton-bar': await wrapTestComponent('sw-skeleton-bar'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-switch-field-deprecated.
             'sw-switch-field-deprecated': await wrapTestComponent('sw-switch-field-deprecated'),
             'sw-button-process': true,
             'sw-media-collapse': true,

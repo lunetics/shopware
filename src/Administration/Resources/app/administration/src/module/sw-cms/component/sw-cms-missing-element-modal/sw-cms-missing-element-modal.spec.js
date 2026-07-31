@@ -30,6 +30,7 @@ async function createWrapper() {
                 stubs: {
                     'sw-modal': await wrapTestComponent('sw-modal'),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-base-field': await wrapTestComponent('sw-base-field'),
                     'sw-field-error': await wrapTestComponent('sw-field-error'),

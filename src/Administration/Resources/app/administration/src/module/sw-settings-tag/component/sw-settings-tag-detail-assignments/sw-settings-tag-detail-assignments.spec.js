@@ -105,6 +105,7 @@ async function createWrapper() {
                     'sw-tabs-item': true,
                     'sw-text-field': true,
                     'sw-settings-tag-detail-assignments': true,
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': true,
                     'sw-card-filter': true,
                 },
@@ -158,6 +159,7 @@ async function createWrapper() {
                     'sw-container': true,
                     'sw-text-field': true,
                     'sw-settings-tag-detail-assignments': true,
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': true,
                     'sw-card-filter': true,
                     'sw-data-grid': true,

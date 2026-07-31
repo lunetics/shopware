@@ -50,6 +50,7 @@ async function createWrapper(slotsData = {}, { routeName = undefined } = {}) {
                     template: '<div class="sw-meteor-navigation"></div>',
                 },
                 'sw-tabs': await wrapTestComponent('sw-tabs'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                 'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                 'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                 'router-link': {

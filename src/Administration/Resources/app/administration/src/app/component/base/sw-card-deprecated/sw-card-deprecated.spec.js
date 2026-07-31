@@ -12,6 +12,7 @@ async function createWrapper(additionalOptions = {}) {
                 'sw-context-button': await wrapTestComponent('sw-context-button'),
                 'sw-loader': true,
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 'sw-context-menu': await wrapTestComponent('sw-context-menu'),
                 'sw-ignore-class': true,

@@ -76,6 +76,7 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-order', () => {
                     'sw-page': await wrapTestComponent('sw-page'),
                     'sw-loader': true,
                     'sw-select-field': await wrapTestComponent('sw-select-field', { sync: true }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-select-field-deprecated.
                     'sw-select-field-deprecated': await wrapTestComponent('sw-select-field-deprecated', { sync: true }),
                     'sw-bulk-edit-custom-fields': await wrapTestComponent('sw-bulk-edit-custom-fields'),
                     'sw-bulk-edit-change-type-field-renderer': await wrapTestComponent(
@@ -90,10 +91,12 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-order', () => {
                     'sw-select-base': await wrapTestComponent('sw-select-base'),
                     'sw-single-select': await wrapTestComponent('sw-single-select'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-textarea-field': await wrapTestComponent('sw-textarea-field'),
                     'sw-textarea-field-deprecated': await wrapTestComponent('sw-textarea-field-deprecated', { sync: true }),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field', { sync: true }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                     'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -115,6 +118,7 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-order', () => {
                     'sw-help-text': true,
                     'sw-label': true,
                     'sw-tabs': await wrapTestComponent('sw-tabs'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                     'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                     'sw-ignore-class': true,

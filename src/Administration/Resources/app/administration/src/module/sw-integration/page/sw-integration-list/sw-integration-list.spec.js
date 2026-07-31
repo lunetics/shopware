@@ -99,11 +99,13 @@ async function createWrapper(privileges = [], integrations = null, options = {})
                     template: '<div><slot></slot></div>',
                 },
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-field-error': true,
                 'sw-field-copyable': true,

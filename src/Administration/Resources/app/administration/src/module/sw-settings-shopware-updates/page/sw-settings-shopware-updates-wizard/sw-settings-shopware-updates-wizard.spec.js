@@ -162,6 +162,7 @@ describe('module/sw-settings-shopware-updates/page/sw-settings-shopware-updates-
                         },
                         'mt-progress-bar': true,
                         'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                         'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', {
                             sync: true,
                         }),

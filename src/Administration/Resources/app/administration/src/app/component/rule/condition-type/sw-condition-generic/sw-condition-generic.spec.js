@@ -64,6 +64,7 @@ async function createWrapper(condition = {}) {
                 'sw-condition-operator-select': await wrapTestComponent('sw-condition-operator-select'),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -77,6 +78,7 @@ async function createWrapper(condition = {}) {
                 'sw-select-selection-list': await wrapTestComponent('sw-select-selection-list'),
                 'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer'),
                 'sw-condition-unit-menu': await wrapTestComponent('sw-condition-unit-menu', { sync: true }),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-number-field-deprecated.
                 'sw-number-field-deprecated': await wrapTestComponent('sw-number-field-deprecated', { sync: true }),
                 'sw-condition-value-between-date': true,
                 'sw-context-button': true,
@@ -87,6 +89,7 @@ async function createWrapper(condition = {}) {
                 'sw-label': true,
                 'sw-highlight-text': true,
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': {
                     template: '<div class="sw-popover"><slot></slot></div>',
                 },

@@ -32,6 +32,7 @@ async function createWrapper(privileges = [], fieldType = null, conditionType = 
             'sw-select-result': await wrapTestComponent('sw-select-result'),
             'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
             'sw-popover': await wrapTestComponent('sw-popover'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
             'sw-popover-deprecated': true,
             'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
             'sw-field-error': await wrapTestComponent('sw-field-error'),

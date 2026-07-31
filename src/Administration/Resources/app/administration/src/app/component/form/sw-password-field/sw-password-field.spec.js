@@ -9,6 +9,7 @@ async function createWrapper(additionalOptions = {}) {
         props: {},
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-password-field-deprecated.
                 'sw-password-field-deprecated': true,
             },
         },

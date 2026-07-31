@@ -62,6 +62,7 @@ async function createWrapper({ featureActive = false } = {}) {
                         template: '<div class="mt-tabs"></div>',
                     },
                     'mt-icon': true,
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': true,
                 },
                 provide: {

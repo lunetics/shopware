@@ -64,6 +64,7 @@ async function createWrapper(props = defaultProps) {
             stubs: {
                 'sw-tree-item': await wrapTestComponent('sw-tree-item'),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-confirm-field': true,
                 'sw-context-menu-item': true,

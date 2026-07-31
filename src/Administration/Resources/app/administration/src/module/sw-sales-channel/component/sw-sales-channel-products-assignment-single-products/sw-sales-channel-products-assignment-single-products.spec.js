@@ -55,6 +55,7 @@ async function createWrapper() {
                     sync: true,
                 }),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field', { sync: true }),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-context-button': await wrapTestComponent('sw-context-button', { sync: true }),
                 'sw-context-menu-item': true,
@@ -64,6 +65,7 @@ async function createWrapper() {
                 'sw-pagination': true,
                 'sw-data-grid-skeleton': true,
                 'sw-data-grid-settings': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': true,
                 'sw-bulk-edit-modal': true,
                 'sw-data-grid-column-boolean': true,

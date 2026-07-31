@@ -61,6 +61,7 @@ async function createWrapper() {
                     }),
                     'sw-field-error': await wrapTestComponent('sw-field-error', { sync: true }),
                     'sw-select-field': await wrapTestComponent('sw-select-field', { sync: true }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-select-field-deprecated.
                     'sw-select-field-deprecated': await wrapTestComponent('sw-select-field-deprecated', { sync: true }),
                     'sw-block-field': await wrapTestComponent('sw-block-field', { sync: true }),
                     'sw-skeleton': true,

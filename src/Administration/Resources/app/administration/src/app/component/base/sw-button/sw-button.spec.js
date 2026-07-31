@@ -9,6 +9,7 @@ async function createWrapper() {
         global: {
             stubs: {
                 'mt-button': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                 'sw-button-deprecated': true,
             },
         },

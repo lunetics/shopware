@@ -9,6 +9,7 @@ async function createWrapper(additionalOptions = {}) {
         props: {},
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-alert-deprecated.
                 'sw-alert-deprecated': true,
             },
         },

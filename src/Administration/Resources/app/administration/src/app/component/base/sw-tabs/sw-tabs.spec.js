@@ -8,6 +8,7 @@ async function createWrapper(additionalOptions = {}) {
     return mount(await wrapTestComponent('sw-tabs', { sync: true }), {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                 'sw-tabs-deprecated': true,
                 'mt-tabs': true,
             },

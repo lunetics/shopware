@@ -65,11 +65,13 @@ async function createWrapper(loginSuccessfull, useDefault = true, ssoUrl = 'http
                 'router-view': true,
                 'sw-loader': true,
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'router-link': true,
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-field-error': await wrapTestComponent('sw-field-error'),
@@ -206,11 +208,13 @@ describe('module/sw-login/view/sw-login-login/sw-login-login.spec.js', () => {
                     'router-view': true,
                     'sw-loader': true,
                     'sw-text-field': true,
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': true,
                     'sw-contextual-field': true,
                     'sw-block-field': true,
                     'router-link': true,
                     'sw-checkbox-field': true,
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': true,
                     'sw-base-field': true,
                     'sw-field-error': true,

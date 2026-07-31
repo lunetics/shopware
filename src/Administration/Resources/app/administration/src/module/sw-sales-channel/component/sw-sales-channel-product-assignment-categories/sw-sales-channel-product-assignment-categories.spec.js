@@ -165,6 +165,7 @@ async function createWrapper() {
                     sync: true,
                 }),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field', { sync: true }),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-field-error': true,
                 'sw-highlight-text': true,

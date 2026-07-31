@@ -9,6 +9,7 @@ async function createWrapper(additionalOptions = {}) {
         global: {
             stubs: {
                 'mt-email-field': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-email-field-deprecated.
                 'sw-email-field-deprecated': true,
             },
         },

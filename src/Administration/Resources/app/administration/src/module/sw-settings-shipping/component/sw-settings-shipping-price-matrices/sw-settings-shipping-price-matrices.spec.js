@@ -29,6 +29,7 @@ describe('module/sw-settings-shipping/component/sw-settings-shipping-price-matri
                         'sw-single-select': true,
                         'sw-popover': true,
                         'sw-text-field': await wrapTestComponent('sw-text-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                         'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                         'sw-context-button': await wrapTestComponent('sw-context-button', {
                             sync: true,

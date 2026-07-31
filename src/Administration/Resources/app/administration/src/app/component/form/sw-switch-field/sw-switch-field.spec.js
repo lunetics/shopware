@@ -8,6 +8,7 @@ async function createWrapper(additionalOptions = {}) {
     return mount(await wrapTestComponent('sw-switch-field', { sync: true }), {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-switch-field-deprecated.
                 'sw-switch-field-deprecated': true,
                 'mt-switch': true,
             },

@@ -77,6 +77,7 @@ describe('module/sw-product/component/sw-product-seo-form', () => {
                     'sw-popover': true,
                     'sw-help-text': true,
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-textarea-field': await wrapTestComponent('sw-textarea-field'),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),

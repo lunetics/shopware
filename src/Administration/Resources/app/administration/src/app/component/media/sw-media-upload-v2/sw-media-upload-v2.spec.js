@@ -32,6 +32,7 @@ async function createWrapper(customOptions = {}) {
                 'sw-media-url-form': await wrapTestComponent('sw-media-url-form'),
                 'sw-media-preview-v2': true,
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -265,6 +266,7 @@ describe('src/app/component/media/sw-media-upload-v2', () => {
                         'sw-media-url-form': await wrapTestComponent('sw-media-url-form'),
                         'sw-media-preview-v2': true,
                         'sw-text-field': await wrapTestComponent('sw-text-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                         'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                         'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                         'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -338,6 +340,7 @@ describe('src/app/component/media/sw-media-upload-v2', () => {
                         'sw-media-url-form': await wrapTestComponent('sw-media-url-form'),
                         'sw-media-preview-v2': true,
                         'sw-text-field': await wrapTestComponent('sw-text-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                         'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                         'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                         'sw-block-field': await wrapTestComponent('sw-block-field'),

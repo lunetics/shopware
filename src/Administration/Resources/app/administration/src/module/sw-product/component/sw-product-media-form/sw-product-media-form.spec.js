@@ -52,6 +52,7 @@ async function createWrapper() {
                 'sw-media-upload-v2': true,
                 'sw-media-preview-v2': true,
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 // CHANGE REASON: Preserve context-menu slots when the v6.8 implementation uses mt-floating-ui. @harness
                 'mt-floating-ui': {

@@ -29,6 +29,7 @@ describe('components/data-grid/sw-data-grid-settings', () => {
                     'sw-field-error': await wrapTestComponent('sw-field-error', { sync: true }),
                     'sw-base-field': await wrapTestComponent('sw-base-field', { sync: true }),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field', { sync: true }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-context-menu-divider': true,
                     'sw-button-group': true,

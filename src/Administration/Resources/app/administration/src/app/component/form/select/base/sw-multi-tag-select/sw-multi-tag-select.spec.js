@@ -21,6 +21,7 @@ const createWrapper = async (customOptions = {}) => {
                 'sw-field-error': await wrapTestComponent('sw-field-error'),
                 'sw-select-selection-list': await wrapTestComponent('sw-select-selection-list'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 'sw-loader': true,
                 'sw-inheritance-switch': true,

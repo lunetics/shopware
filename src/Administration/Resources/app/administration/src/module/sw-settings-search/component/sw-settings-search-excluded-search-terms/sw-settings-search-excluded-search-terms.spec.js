@@ -85,6 +85,7 @@ async function createWrapper(privileges = [], resetError = false) {
                     'sw-context-menu-item': await wrapTestComponent('sw-context-menu-item'),
                     'sw-pagination': await wrapTestComponent('sw-pagination'),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-base-field': await wrapTestComponent('sw-base-field'),
                     'sw-field-error': await wrapTestComponent('sw-field-error'),

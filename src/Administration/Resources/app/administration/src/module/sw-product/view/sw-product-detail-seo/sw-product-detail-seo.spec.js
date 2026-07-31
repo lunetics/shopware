@@ -151,6 +151,7 @@ async function createWrapper(privileges = []) {
                 'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 'sw-select-result': await wrapTestComponent('sw-select-result'),
                 'sw-inheritance-switch': await wrapTestComponent('sw-inheritance-switch', { sync: true }),
@@ -161,6 +162,7 @@ async function createWrapper(privileges = []) {
                 'sw-textarea-field': true,
 
                 'sw-product-variant-info': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': true,
                 'sw-ai-copilot-badge': true,
                 'sw-media-modal-v2': true,

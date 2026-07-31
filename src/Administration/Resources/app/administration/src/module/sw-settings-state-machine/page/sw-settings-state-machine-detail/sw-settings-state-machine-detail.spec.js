@@ -67,6 +67,7 @@ async function createWrapper(privileges = []) {
                             </div>
                         `,
                     },
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-card-deprecated.
                     'sw-card-deprecated': true,
                     'sw-container': true,
                     'sw-text-field': true,

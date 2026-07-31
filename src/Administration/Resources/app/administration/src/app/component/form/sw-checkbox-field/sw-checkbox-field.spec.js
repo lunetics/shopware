@@ -9,6 +9,7 @@ async function createWrapper(additionalOptions = {}) {
         global: {
             stubs: {
                 'mt-checkbox': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': true,
             },
         },

@@ -75,8 +75,10 @@ async function createWrapper(buttonConfig) {
         global: {
             stubs: {
                 'sw-email-field': await wrapTestComponent('sw-email-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-email-field-deprecated.
                 'sw-email-field-deprecated': await wrapTestComponent('sw-email-field-deprecated'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-entity-single-select': await wrapTestComponent('sw-entity-single-select'),
                 'sw-category-tree-field': await wrapTestComponent('sw-category-tree-field'),
@@ -100,6 +102,7 @@ async function createWrapper(buttonConfig) {
                 'sw-product-variant-info': await wrapTestComponent('sw-product-variant-info'),
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': {
                     template: '<div class="sw-popover"><slot></slot></div>',
                 },

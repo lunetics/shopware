@@ -56,6 +56,7 @@ async function createWrapper(condition = {}) {
             stubs: {
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -79,6 +80,7 @@ async function createWrapper(condition = {}) {
                     template: '<div class="sw-highlight-text">{{ this.text }}</div>',
                 },
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': {
                     template: '<div class="sw-popover"><slot></slot></div>',
                 },

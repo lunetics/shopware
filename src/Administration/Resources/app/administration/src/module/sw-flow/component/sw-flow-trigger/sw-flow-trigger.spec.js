@@ -131,6 +131,7 @@ async function createWrapper(propsData) {
                     'sw-help-text': await wrapTestComponent('sw-help-text'),
                     'sw-confirm-field': await wrapTestComponent('sw-confirm-field'),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-context-button': await wrapTestComponent('sw-context-button'),
                     'sw-context-menu': await wrapTestComponent('sw-context-menu'),
@@ -138,6 +139,7 @@ async function createWrapper(propsData) {
                     'router-link': true,
                     'sw-skeleton': await wrapTestComponent('sw-skeleton'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-highlight-text': true,
                     'sw-field-error': true,

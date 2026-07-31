@@ -14,6 +14,7 @@ async function createWrapper(privileges = [], isSso = false) {
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                 'sw-single-select': await wrapTestComponent('sw-single-select'),

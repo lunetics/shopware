@@ -13,6 +13,7 @@ async function createWrapper(propsData = {}) {
                 'sw-single-select': await wrapTestComponent('sw-single-select'),
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 'sw-select-result': await wrapTestComponent('sw-select-result'),
                 'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),

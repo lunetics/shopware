@@ -69,6 +69,7 @@ describe('components/sw-import-export-exporter', () => {
                         'sw-select-result': await wrapTestComponent('sw-select-result'),
                         'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
                         'sw-popover': await wrapTestComponent('sw-popover'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                         'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                         'sw-import-export-exporter': await wrapTestComponent('sw-import-export-exporter', { sync: true }),
                         'sw-product-variant-info': true,

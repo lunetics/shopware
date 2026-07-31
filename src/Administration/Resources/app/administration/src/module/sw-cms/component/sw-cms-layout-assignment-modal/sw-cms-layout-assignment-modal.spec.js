@@ -124,6 +124,7 @@ async function createWrapper(
             global: {
                 stubs: {
                     'sw-tabs': await wrapTestComponent('sw-tabs'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                     'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                     'mt-tabs': {

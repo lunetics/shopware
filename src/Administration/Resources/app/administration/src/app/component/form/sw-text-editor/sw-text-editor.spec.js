@@ -22,11 +22,13 @@ async function createWrapper(allowInlineDataMapping = true) {
                 'sw-text-editor-toolbar': await wrapTestComponent('sw-text-editor-toolbar'),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
 
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
                 'sw-media-field': await wrapTestComponent('sw-media-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-container': await wrapTestComponent('sw-container'),

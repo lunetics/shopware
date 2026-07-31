@@ -49,6 +49,7 @@ async function createWrapper() {
                 'sw-error-summary': true,
                 'sw-loader': true,
                 'router-link': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-number-field-deprecated.
                 'sw-number-field-deprecated': true,
             },
             provide: {

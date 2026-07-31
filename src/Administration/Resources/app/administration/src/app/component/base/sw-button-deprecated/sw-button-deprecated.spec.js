@@ -14,6 +14,7 @@ describe('components/base/sw-button-deprecated', () => {
             },
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                     'router-link': true,
                     'sw-loader': true,
@@ -31,6 +32,7 @@ describe('components/base/sw-button-deprecated', () => {
             props: { role: 'button' },
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                     'router-link': true,
                     'sw-loader': true,
@@ -53,6 +55,7 @@ describe('components/base/sw-button-deprecated', () => {
             },
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                     'router-link': true,
                     'sw-loader': true,
@@ -73,6 +76,7 @@ describe('components/base/sw-button-deprecated', () => {
             slots: { default: 'Router-link text' },
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                     'router-link': {
                         template: '<a><slot></slot></a>',
@@ -93,6 +97,7 @@ describe('components/base/sw-button-deprecated', () => {
             slots: { default: 'I am clickable' },
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                     'router-link': true,
                     'sw-loader': true,
@@ -115,6 +120,7 @@ describe('components/base/sw-button-deprecated', () => {
             slots: { default: 'I am clickable' },
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                     'router-link': true,
                     'sw-loader': true,
@@ -134,6 +140,7 @@ describe('components/base/sw-button-deprecated', () => {
                 template:
                     '<sw-button-deprecated :disabled="disabled" @click="onClick">I am clickable</sw-button-deprecated>',
                 components: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                     'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                 },
                 data() {
@@ -148,6 +155,7 @@ describe('components/base/sw-button-deprecated', () => {
             {
                 global: {
                     stubs: {
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                         'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                         'router-link': true,
                         'sw-loader': true,
@@ -195,6 +203,7 @@ describe('components/base/sw-button-deprecated', () => {
             {
                 global: {
                     stubs: {
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                         'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                         'router-link': true,
                         'sw-loader': true,
@@ -236,6 +245,7 @@ describe('components/base/sw-button-deprecated', () => {
             {
                 global: {
                     stubs: {
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-button-deprecated.
                         'sw-button-deprecated': await wrapTestComponent('sw-button-deprecated', { sync: true }),
                         'router-link': RouterLinkStub,
                         'sw-loader': true,

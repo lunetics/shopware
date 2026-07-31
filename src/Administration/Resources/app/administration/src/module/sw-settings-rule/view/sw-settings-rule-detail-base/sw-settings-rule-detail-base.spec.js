@@ -57,6 +57,7 @@ async function createWrapper(props = defaultProps, privileges = ['rule.editor'])
                 'sw-select-selection-list': await wrapTestComponent('sw-select-selection-list'),
                 'sw-condition-tree': swConditionTree,
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': {
                     template: '<div class="sw-popover"><slot></slot></div>',
                 },

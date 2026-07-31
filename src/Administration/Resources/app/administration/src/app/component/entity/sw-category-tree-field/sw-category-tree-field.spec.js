@@ -93,6 +93,7 @@ async function createWrapper(props = {}) {
                 'sw-ai-copilot-badge': true,
                 'sw-help-text': true,
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated'),
                 'sw-tree': await wrapTestComponent('sw-tree'),
                 'sw-tree-item': await wrapTestComponent('sw-tree-item'),

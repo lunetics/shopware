@@ -8,6 +8,7 @@ async function createWrapper(additionalOptions = {}) {
     return mount(await wrapTestComponent('sw-colorpicker', { sync: true }), {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-colorpicker-deprecated.
                 'sw-colorpicker-deprecated': true,
                 'mt-colorpicker': true,
             },

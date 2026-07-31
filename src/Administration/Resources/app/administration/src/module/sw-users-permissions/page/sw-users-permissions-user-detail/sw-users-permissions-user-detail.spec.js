@@ -173,6 +173,7 @@ async function createWrapper(
                     'sw-verify-user-modal': true,
                     'sw-media-modal-v2': true,
 
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': true,
                     'sw-help-text': true,
                     'sw-inheritance-switch': true,
@@ -442,6 +443,7 @@ describe('modules/sw-users-permissions/page/sw-users-permissions-user-detail', (
         wrapper = await createWrapper('users_and_permissions.editor', {
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 },
             },
@@ -465,6 +467,7 @@ describe('modules/sw-users-permissions/page/sw-users-permissions-user-detail', (
         wrapper = await createWrapper('users_and_permissions.editor', {
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 },
             },
@@ -494,6 +497,7 @@ describe('modules/sw-users-permissions/page/sw-users-permissions-user-detail', (
         wrapper = await createWrapper('users_and_permissions.editor', {
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 },
             },
@@ -517,6 +521,7 @@ describe('modules/sw-users-permissions/page/sw-users-permissions-user-detail', (
         wrapper = await createWrapper('users_and_permissions.editor', {
             global: {
                 stubs: {
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 },
             },

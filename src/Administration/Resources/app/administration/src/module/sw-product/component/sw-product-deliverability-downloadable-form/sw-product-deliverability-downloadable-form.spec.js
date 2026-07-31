@@ -68,9 +68,11 @@ describe('module/sw-product/component/sw-product-deliverability-downloadable-for
                     'sw-inheritance-switch': true,
                     'sw-field-error': true,
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
 
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-base-field': await wrapTestComponent('sw-base-field'),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),

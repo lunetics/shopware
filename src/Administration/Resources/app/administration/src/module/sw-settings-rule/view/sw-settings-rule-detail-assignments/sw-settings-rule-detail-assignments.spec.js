@@ -134,12 +134,14 @@ async function createWrapper(
                         'sw-settings-rule-add-assignment-modal',
                     ),
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'sw-base-field': await wrapTestComponent('sw-base-field'),
                     'sw-entity-listing': await wrapTestComponent('sw-entity-listing'),
                     'sw-data-grid': await wrapTestComponent('sw-data-grid'),
                     'sw-simple-search-field': await wrapTestComponent('sw-simple-search-field'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-context-button': await wrapTestComponent('sw-context-button'),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),

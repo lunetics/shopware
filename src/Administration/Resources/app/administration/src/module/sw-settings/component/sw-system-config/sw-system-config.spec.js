@@ -55,6 +55,7 @@ async function createWrapper(defaultValues = {}, config = createConfig()) {
             renderStubDefaultSlot: true,
             stubs: {
                 'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-password-field-deprecated.
                 'sw-password-field-deprecated': await wrapTestComponent('sw-password-field-deprecated'),
                 'sw-ignore-class': true,
                 'sw-sales-channel-switch': await wrapTestComponent('sw-sales-channel-switch'),
@@ -63,10 +64,13 @@ async function createWrapper(defaultValues = {}, config = createConfig()) {
                 'sw-inherit-wrapper': await wrapTestComponent('sw-inherit-wrapper'),
                 'sw-inheritance-switch': await wrapTestComponent('sw-inheritance-switch'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-number-field-deprecated.
                 'sw-number-field-deprecated': await wrapTestComponent('sw-number-field-deprecated', { sync: true }),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
@@ -80,6 +84,7 @@ async function createWrapper(defaultValues = {}, config = createConfig()) {
                 'sw-select-result': await wrapTestComponent('sw-select-result'),
                 'sw-select-selection-list': await wrapTestComponent('sw-select-selection-list'),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 // CHANGE REASON: Preserve media suggestion slots when the v6.8 popover uses mt-floating-ui. @harness
                 'mt-floating-ui': {
@@ -88,18 +93,22 @@ async function createWrapper(defaultValues = {}, config = createConfig()) {
                 'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
                 'sw-media-field': await wrapTestComponent('sw-media-field'),
                 'sw-url-field': await wrapTestComponent('sw-url-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-url-field-deprecated.
                 'sw-url-field-deprecated': await wrapTestComponent('sw-url-field-deprecated'),
                 'sw-media-media-item': await wrapTestComponent('sw-media-media-item'),
                 'sw-media-base-item': await wrapTestComponent('sw-media-base-item'),
                 'sw-media-preview-v2': await wrapTestComponent('sw-media-preview-v2'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-colorpicker-deprecated.
                 'sw-colorpicker-deprecated': await wrapTestComponent('sw-text-field-deprecated'),
                 'sw-upload-listener': true,
                 'sw-simple-search-field': true,
                 'sw-loader': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-datepicker-deprecated.
                 'sw-datepicker-deprecated': await wrapTestComponent('sw-text-field-deprecated'),
                 'mt-datepicker': MtTextField,
                 'sw-text-editor': await wrapTestComponent('sw-text-field'),
                 'sw-textarea-field-deprecated': await wrapTestComponent('sw-textarea-field-deprecated', { sync: true }),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-switch-field-deprecated.
                 'sw-switch-field-deprecated': await wrapTestComponent('sw-switch-field-deprecated', { sync: true }),
                 'sw-extension-component-section': true,
                 'sw-ai-copilot-badge': true,

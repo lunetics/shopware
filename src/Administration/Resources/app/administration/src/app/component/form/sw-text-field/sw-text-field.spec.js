@@ -8,6 +8,7 @@ async function createWrapper(additionalOptions = {}) {
     return mount(await wrapTestComponent('sw-text-field', { sync: true }), {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': true,
                 'mt-text-field': true,
             },

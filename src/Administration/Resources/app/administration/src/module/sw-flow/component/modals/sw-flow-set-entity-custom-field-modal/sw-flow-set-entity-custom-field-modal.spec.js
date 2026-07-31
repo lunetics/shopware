@@ -142,6 +142,7 @@ async function createWrapper(customField = customNormalField) {
                     'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                     'sw-entity-single-select': await wrapTestComponent('sw-entity-single-select'),
                     'sw-popover': await wrapTestComponent('sw-popover'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                     'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer'),
                     'sw-field-error': await wrapTestComponent('sw-field-error'),

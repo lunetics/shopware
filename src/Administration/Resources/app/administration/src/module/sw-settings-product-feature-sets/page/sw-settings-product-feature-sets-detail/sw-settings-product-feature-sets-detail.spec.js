@@ -40,6 +40,7 @@ const detailPage = async (additionalOptions = {}, privileges = []) => {
                     'sw-text-field': await wrapTestComponent('sw-text-field', {
                         sync: true,
                     }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', {
                         sync: true,
                     }),

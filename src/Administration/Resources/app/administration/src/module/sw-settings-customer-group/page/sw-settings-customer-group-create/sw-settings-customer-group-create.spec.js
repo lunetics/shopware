@@ -59,6 +59,7 @@ async function createWrapper() {
                     'sw-container': await wrapTestComponent('sw-container'),
                     'sw-base-field': await wrapTestComponent('sw-base-field'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-textarea-field': await wrapTestComponent('sw-textarea-field'),
                     'sw-select-base': await wrapTestComponent('sw-select-base'),

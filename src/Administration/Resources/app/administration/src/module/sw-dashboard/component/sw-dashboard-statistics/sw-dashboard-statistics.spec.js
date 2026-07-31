@@ -17,11 +17,13 @@ async function createWrapper(privileges = [], repository = {}) {
     return mount(await wrapTestComponent('sw-dashboard-statistics', { sync: true }), {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-card-deprecated.
                 'sw-card-deprecated': await wrapTestComponent('sw-card-deprecated', { sync: true }),
                 'sw-chart-card': await wrapTestComponent('sw-chart-card'),
                 'sw-entity-listing': true,
                 'sw-chart': true,
                 'sw-select-field': await wrapTestComponent('sw-select-field', { sync: true }),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-select-field-deprecated.
                 'sw-select-field-deprecated': await wrapTestComponent('sw-select-field-deprecated', { sync: true }),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),

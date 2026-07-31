@@ -11,6 +11,7 @@ async function createWrapper() {
         },
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-select-field-deprecated.
                 'sw-select-field-deprecated': true,
             },
         },

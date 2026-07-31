@@ -64,6 +64,7 @@ async function createWrapper() {
                 stubs: {
                     'sw-base-field': await wrapTestComponent('sw-base-field'),
                     'sw-colorpicker': await wrapTestComponent('sw-colorpicker'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-colorpicker-deprecated.
                     'sw-colorpicker-deprecated': await wrapTestComponent('sw-colorpicker-deprecated'),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                     'sw-block-field': await wrapTestComponent('sw-block-field'),

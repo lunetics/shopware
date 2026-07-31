@@ -46,6 +46,7 @@ async function createWrapper(privileges = [], customPropsData = {}) {
         'sw-ignore-class': true,
         'sw-text-field': true,
         'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
         'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated'),
         'sw-field-error': true,
         'sw-help-text': true,
@@ -69,6 +70,7 @@ async function createWrapper(privileges = [], customPropsData = {}) {
         'sw-context-menu-item': await wrapTestComponent('sw-context-menu-item'),
         'sw-entity-single-select': await wrapTestComponent('sw-entity-single-select'),
         'sw-popover': await wrapTestComponent('sw-popover'),
+        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
         'sw-popover-deprecated': {
             props: ['popoverClass'],
             template: `

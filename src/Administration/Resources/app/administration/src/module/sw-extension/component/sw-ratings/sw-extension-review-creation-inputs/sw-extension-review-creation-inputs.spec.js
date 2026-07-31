@@ -16,6 +16,7 @@ describe('src/module/sw-extension/component/sw-ratings/sw-extension-review-creat
                     },
                     stubs: {
                         'sw-text-field': await wrapTestComponent('sw-text-field', { sync: true }),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                         'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                         'sw-contextual-field': await wrapTestComponent('sw-contextual-field', { sync: true }),
                         'sw-block-field': await wrapTestComponent('sw-block-field', { sync: true }),

@@ -39,6 +39,7 @@ async function createWrapper(indexMock = jest.fn(() => Promise.resolve()), delay
                 'sw-select-base': await wrapTestComponent('sw-select-base'),
                 'sw-label': await wrapTestComponent('sw-label'),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                 'sw-error-summary': await wrapTestComponent('sw-error-summary'),

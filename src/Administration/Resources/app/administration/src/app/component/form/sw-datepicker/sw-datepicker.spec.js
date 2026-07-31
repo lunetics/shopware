@@ -9,6 +9,7 @@ async function createWrapper(additionalOptions = {}) {
         global: {
             stubs: {
                 'mt-datepicker': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-datepicker-deprecated.
                 'sw-datepicker-deprecated': true,
             },
         },

@@ -54,6 +54,7 @@ async function createWrapper() {
                     'sw-highlight-text': await wrapTestComponent('sw-highlight-text'),
                     'sw-field-error': await wrapTestComponent('sw-field-error'),
                     'sw-popover': await wrapTestComponent('sw-popover'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                     'sw-loader': true,
                     'router-link': true,

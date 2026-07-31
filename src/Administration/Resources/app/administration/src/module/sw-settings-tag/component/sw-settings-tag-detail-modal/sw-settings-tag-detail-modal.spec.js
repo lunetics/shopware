@@ -65,6 +65,7 @@ async function createWrapper({ featureActive = false } = {}) {
                     'sw-tabs-item': true,
                     'mt-text-field': true,
                     'sw-settings-tag-detail-assignments': true,
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': true,
                 },
             },

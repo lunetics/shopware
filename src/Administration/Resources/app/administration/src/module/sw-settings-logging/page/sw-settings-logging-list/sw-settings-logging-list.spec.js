@@ -38,6 +38,7 @@ async function createWrapper({ featureActive = false } = {}) {
                 'sw-tabs': await wrapTestComponent('sw-tabs', {
                     sync: true,
                 }),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                 'sw-tabs-deprecated': {
                     template: '<div><slot /></div>',
                 },

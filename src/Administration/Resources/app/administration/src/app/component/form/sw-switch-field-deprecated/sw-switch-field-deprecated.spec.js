@@ -27,6 +27,7 @@ const createWrapper = async () => {
     return mount(baseComponent, {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-switch-field-deprecated.
                 'sw-switch-field-deprecated': await wrapTestComponent('sw-switch-field-deprecated', { sync: true }),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
                 'sw-field-error': {
@@ -185,6 +186,7 @@ describe('app/component/form/sw-switch-field-deprecated', () => {
             {
                 global: {
                     stubs: {
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-switch-field-deprecated.
                         'sw-switch-field-deprecated': await wrapTestComponent('sw-switch-field-deprecated'),
                         'sw-base-field': await wrapTestComponent('sw-base-field'),
                         'sw-field-error': {

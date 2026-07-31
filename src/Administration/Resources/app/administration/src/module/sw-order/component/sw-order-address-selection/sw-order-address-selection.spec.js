@@ -81,6 +81,7 @@ async function createWrapper(propsData, customerResponse = createCustomerMock())
                 'sw-single-select': await wrapTestComponent('sw-single-select', { sync: true }),
                 'sw-select-result-list': await wrapTestComponent('sw-select-result-list', { sync: true }),
                 'sw-popover': await wrapTestComponent('sw-popover'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 'sw-block-field': await wrapTestComponent('sw-block-field', { sync: true }),
                 'sw-customer-address-form': await wrapTestComponent('sw-customer-address-form'),
@@ -94,6 +95,7 @@ async function createWrapper(propsData, customerResponse = createCustomerMock())
                 }),
                 'sw-container': await wrapTestComponent('sw-container'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-entity-single-select': await wrapTestComponent('sw-entity-single-select'),
                 'sw-customer-address-form-options': await wrapTestComponent('sw-customer-address-form-options'),

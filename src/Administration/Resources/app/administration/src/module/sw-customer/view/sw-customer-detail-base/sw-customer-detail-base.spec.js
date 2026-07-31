@@ -70,6 +70,7 @@ async function createWrapper() {
                 },
                 'sw-custom-field-set-renderer': await wrapTestComponent('sw-custom-field-set-renderer', { sync: true }),
                 'sw-tabs': await wrapTestComponent('sw-tabs'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                 'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                 'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                 'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer', { sync: true }),

@@ -72,12 +72,14 @@ async function createWrapper(props = defaultProps()) {
                     'sw-entity-single-select': await wrapTestComponent('sw-entity-single-select'),
                     'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer'),
                     'sw-popover': await wrapTestComponent('sw-popover'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                     'sw-select-base': await wrapTestComponent('sw-select-base'),
                     'sw-select-result': await wrapTestComponent('sw-select-result'),
                     'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                     'sw-single-select': await wrapTestComponent('sw-single-select'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-condition-value-between-date': true,
                     'sw-condition-type-select': true,

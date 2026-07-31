@@ -145,6 +145,7 @@ describe('src/module/sw-order/page/sw-order-create', () => {
             'sw-help-center-v2': true,
             'router-link': true,
             'sw-error-summary': true,
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
             'sw-tabs-deprecated': true,
         };
     });

@@ -56,6 +56,7 @@ describe('src/module/sw-settings-listing/component/sw-settings-listing-option-cr
                         },
                         'sw-data-grid': await wrapTestComponent('sw-data-grid', { sync: true }),
                         'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                         'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', {
                             sync: true,
                         }),
@@ -68,6 +69,7 @@ describe('src/module/sw-settings-listing/component/sw-settings-listing-option-cr
                         'sw-select-result-list': await wrapTestComponent('sw-select-result-list'),
                         'sw-select-result': await wrapTestComponent('sw-select-result'),
                         'sw-popover': await wrapTestComponent('sw-popover'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                         'sw-popover-deprecated': {
                             props: ['popoverClass'],
                             template: `

@@ -157,6 +157,7 @@ describe('module/sw-settings-snippet/page/sw-settings-snippet-detail', () => {
                         'sw-page': await wrapTestComponent('sw-page'),
                         'sw-card-view': await wrapTestComponent('sw-card-view'),
                         'sw-text-field': await wrapTestComponent('sw-text-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                         'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                         'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                         'sw-block-field': await wrapTestComponent('sw-block-field'),
@@ -679,6 +680,7 @@ describe('module/sw-settings-snippet/page/sw-settings-snippet-detail', () => {
                         'sw-page': await wrapTestComponent('sw-page'),
                         'sw-card-view': await wrapTestComponent('sw-card-view'),
                         'sw-text-field': await wrapTestComponent('sw-text-field'),
+                        // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                         'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                         'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                         'sw-block-field': await wrapTestComponent('sw-block-field'),

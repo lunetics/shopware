@@ -93,6 +93,7 @@ async function createWrapper(props = defaultProps) {
                 'sw-select-field': await wrapTestComponent('sw-select-field', { sync: true }),
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
                 'sw-base-field': await wrapTestComponent('sw-base-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-select-field-deprecated.
                 'sw-select-field-deprecated': await wrapTestComponent('sw-select-field-deprecated', { sync: true }),
             },
             provide: {

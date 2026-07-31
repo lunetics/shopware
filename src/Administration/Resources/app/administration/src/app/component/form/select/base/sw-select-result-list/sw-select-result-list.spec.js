@@ -12,6 +12,7 @@ describe('components/sw-select-result-list', () => {
             global: {
                 stubs: {
                     'sw-popover': await wrapTestComponent('sw-popover', { sync: true }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
                 },
             },

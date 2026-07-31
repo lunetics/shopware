@@ -62,12 +62,14 @@ async function createWrapper({ featureActive = false } = {}) {
 
                 stubs: {
                     'sw-tabs': await wrapTestComponent('sw-tabs'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                     'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                     'sw-container': await wrapTestComponent('sw-container'),
                     'sw-multi-select': await wrapTestComponent('sw-multi-select'),
                     'sw-textarea-field': await wrapTestComponent('sw-textarea-field'),
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'mt-tabs': {
                         name: 'mt-tabs',

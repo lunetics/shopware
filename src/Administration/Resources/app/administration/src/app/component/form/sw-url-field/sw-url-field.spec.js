@@ -9,6 +9,7 @@ async function createWrapper(additionalOptions = {}) {
         global: {
             stubs: {
                 'mt-url-field': true,
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-url-field-deprecated.
                 'sw-url-field-deprecated': true,
             },
         },

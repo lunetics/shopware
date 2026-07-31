@@ -53,6 +53,7 @@ async function createWrapper(props = defaultProps, { featureActive = false } = {
                 },
                 stubs: {
                     'sw-tabs': await wrapTestComponent('sw-tabs'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                     'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                     'mt-tabs': {
                         name: 'mt-tabs',
@@ -75,6 +76,7 @@ async function createWrapper(props = defaultProps, { featureActive = false } = {
                         template: '<div class="mt-tabs"></div>',
                     },
                     'sw-text-field': await wrapTestComponent('sw-text-field'),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                     'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                     'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                     'sw-block-field': await wrapTestComponent('sw-block-field'),

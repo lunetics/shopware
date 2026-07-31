@@ -88,6 +88,7 @@ describe('components/data-grid/sw-data-grid', () => {
             }),
             'sw-context-menu-item': await wrapTestComponent('sw-context-menu-item', { sync: true }),
             'sw-popover': await wrapTestComponent('sw-popover'),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
             'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
             'sw-base-field': await wrapTestComponent('sw-base-field', {
                 sync: true,

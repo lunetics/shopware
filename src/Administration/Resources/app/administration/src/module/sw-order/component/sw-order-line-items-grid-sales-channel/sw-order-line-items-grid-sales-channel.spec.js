@@ -174,6 +174,7 @@ async function createWrapper() {
                         template: '<div class="sw-context-menu-item" @click="$emit(\'click\')"><slot></slot></div>',
                     },
                     'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field', { sync: true }),
+                    // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                     'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                     'mt-number-field': {
                         template:

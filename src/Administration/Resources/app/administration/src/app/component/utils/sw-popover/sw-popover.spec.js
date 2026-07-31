@@ -8,6 +8,7 @@ async function createWrapper(additionalOptions = {}) {
     return mount(await wrapTestComponent('sw-popover', { sync: true }), {
         global: {
             stubs: {
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': true,
                 'mt-floating-ui': true,
             },

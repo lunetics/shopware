@@ -77,6 +77,7 @@ describe('sw-app-actions', () => {
             'sw-context-menu': await wrapTestComponent('sw-context-menu', { sync: true }),
             'sw-context-menu-item': await wrapTestComponent('sw-context-menu-item', { sync: true }),
             'sw-popover': await wrapTestComponent('sw-popover', { sync: true }),
+            // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
             'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
             'sw-modal': true,
             'sw-extension-icon': await wrapTestComponent('sw-extension-icon', { sync: true }),

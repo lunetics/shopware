@@ -14,15 +14,18 @@ async function createWrapper(customProps = {}) {
                 'sw-container': await wrapTestComponent('sw-container'),
                 'sw-label': await wrapTestComponent('sw-label'),
                 'sw-tabs': await wrapTestComponent('sw-tabs'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-tabs-deprecated.
                 'sw-tabs-deprecated': await wrapTestComponent('sw-tabs-deprecated', { sync: true }),
                 'sw-tabs-item': await wrapTestComponent('sw-tabs-item'),
                 'sw-inherit-wrapper': await wrapTestComponent('sw-inherit-wrapper'),
                 'sw-inheritance-switch': await wrapTestComponent('sw-inheritance-switch'),
                 'sw-form-field-renderer': await wrapTestComponent('sw-form-field-renderer'),
                 'sw-text-field': await wrapTestComponent('sw-text-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-text-field-deprecated.
                 'sw-text-field-deprecated': await wrapTestComponent('sw-text-field-deprecated', { sync: true }),
                 'sw-contextual-field': await wrapTestComponent('sw-contextual-field'),
                 'sw-checkbox-field': await wrapTestComponent('sw-checkbox-field'),
+                // @deprecated tag:v6.8.0.0 - Remove this mock with sw-checkbox-field-deprecated.
                 'sw-checkbox-field-deprecated': await wrapTestComponent('sw-checkbox-field-deprecated', { sync: true }),
                 'sw-entity-multi-select': true,
                 'sw-block-field': await wrapTestComponent('sw-block-field'),
