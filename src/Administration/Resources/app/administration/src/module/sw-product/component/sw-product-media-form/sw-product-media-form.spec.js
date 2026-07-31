@@ -54,7 +54,6 @@ async function createWrapper() {
                 'sw-popover': await wrapTestComponent('sw-popover'),
                 // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                 'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
-                // CHANGE REASON: Preserve context-menu slots when the v6.8 implementation uses mt-floating-ui. @harness
                 'mt-floating-ui': {
                     template: '<div><slot /></div>',
                 },
@@ -93,7 +92,6 @@ function getMediaCollection(collection = []) {
 }
 
 describe('module/sw-product/component/sw-product-media-form', () => {
-    // CHANGE REASON: Recreate mutable product media so assertions never depend on earlier tests reordering it. @cleanup
     beforeEach(() => {
         const product = {
             cover: {
@@ -163,7 +161,6 @@ describe('module/sw-product/component/sw-product-media-form', () => {
         expect(wrapper.find('.is--cover').exists()).toBeTruthy();
     });
 
-    // CHANGE REASON: The legacy context-menu assertion renders through sw-popover. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy product-media popover.
     it.deprecated('v6.8.0.0')('should not show cover when `showCoverLabel` is false', async () => {
         global.activeAclRoles = [];
@@ -185,7 +182,6 @@ describe('module/sw-product/component/sw-product-media-form', () => {
         expect(buttons.at(0).text()).toContain('global.default.remove');
     });
 
-    // CHANGE REASON: Verify the same cover-label menu through the v6.8 floating-ui implementation. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])('should not show cover when `showCoverLabel` is false', async () => {
         global.activeAclRoles = [];
         const wrapper = await createWrapper();
@@ -206,7 +202,6 @@ describe('module/sw-product/component/sw-product-media-form', () => {
         expect(buttons.at(0).text()).toContain('global.default.remove');
     });
 
-    // CHANGE REASON: The legacy cover action renders through sw-popover. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy product-media popover.
     it.deprecated('v6.8.0.0')('should move media to first position when it is marked as cover', async () => {
         global.activeAclRoles = [];
@@ -238,7 +233,6 @@ describe('module/sw-product/component/sw-product-media-form', () => {
         expect(productMediaItems[1].find('sw-media-preview-v2-stub').attributes('source')).toEqual(media[0].mediaId);
     });
 
-    // CHANGE REASON: Verify the cover action through the v6.8 floating-ui implementation. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])('should move media to first position when it is marked as cover', async () => {
         global.activeAclRoles = [];
         const wrapper = await createWrapper();
@@ -275,7 +269,6 @@ describe('module/sw-product/component/sw-product-media-form', () => {
 
         // Check if previous mediaItem exists
         expect(wrapper.vm.product.media).toHaveLength(2);
-        // CHANGE REASON: The isolated fixture starts with the existing media item in its natural first position. @cleanup
         expect(wrapper.vm.product.media[0].mediaId).toBe('media1');
 
         // Simulate successful upload for existing media

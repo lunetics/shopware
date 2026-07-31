@@ -11,14 +11,12 @@ describe('Jest feature flag extensions', () => {
     it('registers a deprecated test when its major feature flag is inactive', () => {
         const testFunction = Object.assign(jest.fn(), { skip: jest.fn() }) as unknown as jest.It;
 
-        // CHANGE REASON: A synthetic future version keeps this inactive-case assertion independent of the runner baseline. @harness
         createDeprecatedTest(testFunction)('v99.0.0.0')('deprecated test', jest.fn());
 
         expect(testFunction).toHaveBeenCalledWith('deprecated test', expect.any(Function));
         expect(testFunction.skip).not.toHaveBeenCalled();
     });
 
-    // CHANGE REASON: The helper activates V6_8_0_0 without mutating the shared feature-flag global manually. @harness
     it.activeFeatureFlags(['v6.8.0.0'])('skips a deprecated test when its major feature flag is active', () => {
         const testFunction = Object.assign(jest.fn(), { skip: jest.fn() }) as unknown as jest.It;
 
@@ -38,7 +36,6 @@ describe('Jest feature flag extensions', () => {
         afterEach(() => {
             // eslint-disable-next-line jest/no-standalone-expect -- Verifies the flags remain active after the test callback.
             expect(globalThis.activeFeatureFlags).toEqual([
-                // CHANGE REASON: Active test flags are additive to feature flags supplied by the current Jest runner. @harness
                 ...defaultActiveFeatureFlags,
                 'EXISTING_FEATURE',
                 'NEW_FEATURE',
@@ -47,7 +44,6 @@ describe('Jest feature flag extensions', () => {
 
         afterAll(() => {
             // eslint-disable-next-line jest/no-standalone-expect -- Verifies the environment restores the flags after teardown.
-            // CHANGE REASON: Teardown restores the runner's default feature flags instead of assuming an empty baseline. @harness
             expect(globalThis.activeFeatureFlags).toEqual(defaultActiveFeatureFlags);
         });
 
@@ -56,14 +52,12 @@ describe('Jest feature flag extensions', () => {
             'NEW_FEATURE',
         ])('activates feature flags during setup, the test, and teardown', () => {
             expect(globalThis.activeFeatureFlags).toEqual([
-                // CHANGE REASON: Active test flags are additive to feature flags supplied by the current Jest runner. @harness
                 ...defaultActiveFeatureFlags,
                 'EXISTING_FEATURE',
                 'NEW_FEATURE',
             ]);
 
             expect(featureFlagsInSetup).toEqual([
-                // CHANGE REASON: Setup observes the runner baseline together with the test-scoped feature flags. @harness
                 ...defaultActiveFeatureFlags,
                 'EXISTING_FEATURE',
                 'NEW_FEATURE',

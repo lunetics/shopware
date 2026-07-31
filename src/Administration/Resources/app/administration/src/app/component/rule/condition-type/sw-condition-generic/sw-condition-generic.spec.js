@@ -93,7 +93,6 @@ async function createWrapper(condition = {}) {
                 'sw-popover-deprecated': {
                     template: '<div class="sw-popover"><slot></slot></div>',
                 },
-                // CHANGE REASON: Preserve unit-menu slots when the v6.8 popover uses mt-floating-ui. @harness
                 'mt-floating-ui': {
                     template: '<div><slot /></div>',
                 },

@@ -127,7 +127,6 @@ describe('src/module/sw-settings-custom-field/component/sw-custom-field-translat
         expect(wrapper.vm.config.label1[en]).toBe(value !== '' ? value : null);
     });
 
-    // CHANGE REASON: This assertion covers the translated-label legacy sw-tabs branch replaced under V6_8_0_0. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-tabs branch.
     it.deprecated('v6.8.0.0')(
         'should render multiple locales with deprecated tabs when the major feature flag is inactive',
@@ -195,7 +194,6 @@ describe('src/module/sw-settings-custom-field/component/sw-custom-field-translat
         ).toBe('label1 (locale.de-DE)');
     });
 
-    // CHANGE REASON: The legacy update assertion renders the input through the sw-tabs content slot. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy translated-label tabs.
     it.deprecated('v6.8.0.0')('should update multiple locales with tabs', async () => {
         const wrapper = await createWrapper();
@@ -211,7 +209,6 @@ describe('src/module/sw-settings-custom-field/component/sw-custom-field-translat
         expect(wrapper.vm.config.label1[en]).toBe('NewValue');
     });
 
-    // CHANGE REASON: Verify the same locale update through the v6.8 Meteor tab content. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])('should update multiple locales with tabs', async () => {
         const wrapper = await createWrapper(defaultProps, { featureActive: true });
         await flushPromises();

@@ -14,7 +14,6 @@ const createWrapper = async ({ routeName = 'sw.mail.template.index.templates', r
                 provide: {
                     searchRankingService: {},
                     feature: {
-                        // CHANGE REASON: Reuse the normalized feature service so declarative flag aliases work in this test. @migrated
                         isActive: (feature) => Shopware.Feature.isActive(feature),
                     },
                 },
@@ -123,7 +122,6 @@ describe('modules/sw-mail-template/page/sw-mail-template-index', () => {
      * @deprecated tag:v6.8.0 - This test will be removed.
      */
     describe('without v6.8.0.0 feature flag', () => {
-        // CHANGE REASON: This assertion covers the direct-list layout replaced by routed mt-tabs under V6_8_0_0. @removed @migrated
         // @deprecated tag:v6.8.0.0 - The test will be removed with the direct-list mail-template layout.
         it.deprecated('v6.8.0.0')('should render both lists directly', async () => {
             const wrapper = await createWrapper();
@@ -139,7 +137,6 @@ describe('modules/sw-mail-template/page/sw-mail-template-index', () => {
      * @deprecated tag:v6.8.0 - This test will be removed.
      */
     describe('with v6.8.0.0 feature flag', () => {
-        // CHANGE REASON: Attach the flag to the meteor-tabs test instead of managing describe-wide global state. @migrated
         it.activeFeatureFlags(['v6.8.0.0'])('should render meteor tabs with router-view instead of lists', async () => {
             const wrapper = await createWrapper({
                 routeName: 'sw.mail.template.index.header_footer',
@@ -166,7 +163,6 @@ describe('modules/sw-mail-template/page/sw-mail-template-index', () => {
             expect(wrapper.findComponent({ name: 'sw-mail-header-footer-list' }).exists()).toBe(false);
         });
 
-        // CHANGE REASON: Keep feature activation local to the meteor tab-navigation test. @migrated
         it.activeFeatureFlags(['v6.8.0.0'])('should navigate when a meteor tab item is clicked', async () => {
             const routerPush = jest.fn();
             const wrapper = await createWrapper({ routerPush });

@@ -17,7 +17,6 @@ async function createWrapper() {
 }
 
 describe('components/base/sw-button', () => {
-    // CHANGE REASON: The component always renders mt-button and no longer reads ENABLE_METEOR_COMPONENTS. @cleanup
     it('should render the mt-button', async () => {
         const wrapper = await createWrapper();
 

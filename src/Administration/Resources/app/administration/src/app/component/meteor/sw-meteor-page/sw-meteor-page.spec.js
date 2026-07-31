@@ -36,7 +36,6 @@ async function createWrapper(slotsData = {}, { routeName = undefined } = {}) {
         global: {
             provide: {
                 feature: {
-                    // CHANGE REASON: Reuse the normalized feature service so declarative flag aliases work in this test. @migrated
                     isActive: (flag) => Shopware.Feature.isActive(flag),
                 },
             },
@@ -217,7 +216,6 @@ describe('src/app/component/meteor/sw-meteor-page', () => {
         expect(title.text()).toBe('sw.example.title');
     });
 
-    // CHANGE REASON: This assertion covers sw-meteor-page's legacy sw-tabs branch removed under V6_8_0_0. @removed @migrated
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-tabs branch.
     it.deprecated('v6.8.0.0')(
         'should render the deprecated tabs when slot is filled and the major feature flag is inactive',
@@ -242,7 +240,6 @@ describe('src/app/component/meteor/sw-meteor-page', () => {
         },
     );
 
-    // CHANGE REASON: Express the meteor-tabs rendering branch declaratively for deterministic setup. @migrated
     it.activeFeatureFlags(['v6.8.0.0'])(
         'should render meteor tabs when slot is filled and the major feature flag is active',
         async () => {
@@ -293,7 +290,6 @@ describe('src/app/component/meteor/sw-meteor-page', () => {
         },
     );
 
-    // CHANGE REASON: Keep feature activation local to the meteor tab-label behavior. @migrated
     it.activeFeatureFlags(['v6.8.0.0'])(
         'should prefer the visible tab text over the title attribute for meteor tab labels',
         async () => {

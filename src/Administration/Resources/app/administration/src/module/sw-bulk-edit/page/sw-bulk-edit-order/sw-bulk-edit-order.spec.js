@@ -469,7 +469,6 @@ describe('src/module/sw-bulk-edit/page/sw-bulk-edit-order', () => {
         ).toBeUndefined();
     });
 
-    // CHANGE REASON: V6_8_0_0 renders custom fields directly and removes the per-field change checkbox callback. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy bulk-edit custom-field selection.
     it.deprecated('v6.8.0.0')('should call onCustomFieldsChange when a customField is changed', async () => {
         wrapper = await createWrapper();

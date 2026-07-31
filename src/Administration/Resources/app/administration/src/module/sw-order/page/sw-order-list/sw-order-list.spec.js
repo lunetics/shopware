@@ -445,7 +445,6 @@ describe('src/module/sw-order/page/sw-order-list', () => {
         expect(criteria.getAssociation('primaryOrderTransaction').hasAssociation('stateMachineState')).toBe(true);
     });
 
-    // CHANGE REASON: Let the test environment own the feature-flag lifetime instead of maintaining a local reset block. @migrated
     it.activeFeatureFlags(['v6.8.0.0'])('should only load primary order associations when v6.8.0.0 is active', async () => {
         global.activeAclRoles = [];
         wrapper = await createWrapper();
@@ -618,7 +617,6 @@ describe('src/module/sw-order/page/sw-order-list', () => {
         expect(stateTexts).toContain('Paid');
     });
 
-    // CHANGE REASON: Use automatic feature-flag cleanup for the no-fallback branch. @migrated
     it.activeFeatureFlags(['v6.8.0.0'])(
         'should not fall back to deliveries and transactions when v6.8.0.0 is active',
         async () => {

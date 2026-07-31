@@ -16,7 +16,6 @@ import 'src/app/component/utils/sw-popover';
 
 Shopware.Component.register('sw-extension-icon', SwExtensionIcon);
 
-// CHANGE REASON: Forward context-menu content through the v6.8 mt-floating-ui test double. @harness
 const mtFloatingUiStub = {
     template: '<div><slot /></div>',
 };
@@ -127,11 +126,9 @@ describe('sw-app-actions', () => {
         expect(actionButtons.at(1).props('action')).toEqual(actionButtonData[1]);
     };
 
-    // CHANGE REASON: This variant preserves coverage for the legacy sw-popover rendering path. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-popover rendering path.
     it.deprecated('v6.8.0.0')('creates an sw-app-action-button per action', createsAppActionButtonPerAction);
 
-    // CHANGE REASON: This variant verifies the same behavior through the v6.8 mt-floating-ui path. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])('creates an sw-app-action-button per action', createsAppActionButtonPerAction);
 
     it('should not reset the selectedIds on creation when entity exists', async () => {
@@ -248,14 +245,12 @@ describe('sw-app-actions', () => {
         ]);
     };
 
-    // CHANGE REASON: This variant preserves coverage for the legacy sw-popover rendering path. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-popover rendering path.
     it.deprecated('v6.8.0.0')(
         'calls appActionButtonService.runAction if triggered by context menu button',
         runsActionTriggeredByContextMenuButton,
     );
 
-    // CHANGE REASON: This variant verifies the same behavior through the v6.8 mt-floating-ui path. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])(
         'calls appActionButtonService.runAction if triggered by context menu button',
         runsActionTriggeredByContextMenuButton,
@@ -290,11 +285,9 @@ describe('sw-app-actions', () => {
         });
     };
 
-    // CHANGE REASON: This variant preserves coverage for the legacy sw-popover rendering path. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-popover rendering path.
     it.deprecated('v6.8.0.0')('calls appActionButtonService.runAction with correct response', runsActionWithCorrectResponse);
 
-    // CHANGE REASON: This variant verifies the same behavior through the v6.8 mt-floating-ui path. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])(
         'calls appActionButtonService.runAction with correct response',
         runsActionWithCorrectResponse,
@@ -332,14 +325,12 @@ describe('sw-app-actions', () => {
         expect(wrapper.find('.sw-modal-app-action-button').exists()).toBe(true);
     };
 
-    // CHANGE REASON: This variant preserves coverage for the legacy sw-popover rendering path. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-popover rendering path.
     it.deprecated('v6.8.0.0')(
         'calls appActionButtonService.runAction with open modal response',
         runsActionWithOpenModalResponse,
     );
 
-    // CHANGE REASON: This variant verifies the same behavior through the v6.8 mt-floating-ui path. @upgraded
     it.activeFeatureFlags(['v6.8.0.0'])(
         'calls appActionButtonService.runAction with open modal response',
         runsActionWithOpenModalResponse,

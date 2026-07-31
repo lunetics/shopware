@@ -19,7 +19,6 @@ async function createWrapper(additionalOptions = {}) {
 }
 
 describe('src/app/component/base/sw-card', () => {
-    // CHANGE REASON: The component always renders mt-card and no longer reads ENABLE_METEOR_COMPONENTS. @cleanup
     it('should render the mt-card', async () => {
         const wrapper = await createWrapper();
 

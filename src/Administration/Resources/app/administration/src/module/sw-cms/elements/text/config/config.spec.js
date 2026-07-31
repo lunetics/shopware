@@ -116,7 +116,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
         await setupCmsEnvironment();
     });
 
-    // CHANGE REASON: The fallback sw-tabs branch is removed in v6.8 and already has a Meteor-tabs counterpart. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy CMS text tabs.
     it.deprecated('v6.8.0.0')('should render deprecated tabs when the major feature flag is inactive', async () => {
         const wrapper = await createWrapper();
@@ -157,7 +156,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
         expect(wrapper.find('.sw-cms-el-config-text__tab-settings').exists()).toBe(true);
     });
 
-    // CHANGE REASON: The legacy input assertion renders the removed sw-text-editor branch. @removed @upgraded
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy CMS text editor.
     it.deprecated('v6.8.0.0')('should emits element-update when trigger @input event', async () => {
         const wrapper = await createWrapper();
@@ -177,7 +175,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
         expect(wrapper.emitted()['element-update'][0][0]).toEqual(wrapper.vm.element);
     });
 
-    // CHANGE REASON: Verify content updates through the v6.8 Meteor text-editor model event. @upgraded
     it.activeFeatureFlags(['v6.8.0.0', 'METEOR_TEXT_EDITOR'])(
         'should emits element-update when trigger @input event',
         async () => {
@@ -205,7 +202,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
         },
     );
 
-    // CHANGE REASON: The blur integration belongs to the legacy sw-text-editor branch and has no v6.8 equivalent. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy sw-text-editor blur integration.
     it.deprecated('v6.8.0.0')('should emits element-update when trigger @blur event', async () => {
         const wrapper = await createWrapper();
@@ -227,7 +223,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
 
     describe('handleUpdateContent', () => {
         it('should return true when textEditor ref is not available', async () => {
-            // CHANGE REASON: Keep the no-validation case deterministic when major mode also enables METEOR_TEXT_EDITOR. @harness
             const wrapper = await createWrapper({
                 'mt-text-editor': {
                     template: '<div></div>',
@@ -239,7 +234,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
             expect(result).toBe(true);
         });
 
-        // CHANGE REASON: Exercise validation in the v6.8 CMS container with the Meteor editor active. @upgraded
         it.activeFeatureFlags(['v6.8.0.0', 'METEOR_TEXT_EDITOR'])(
             'should delegate to textEditor.validate and return true on success',
             async () => {
@@ -263,7 +257,6 @@ describe('src/module/sw-cms/elements/text/config', () => {
             },
         );
 
-        // CHANGE REASON: Exercise invalid content in the v6.8 CMS container with the Meteor editor active. @upgraded
         it.activeFeatureFlags(['v6.8.0.0', 'METEOR_TEXT_EDITOR'])(
             'should return false when textEditor.validate reports invalid content',
             async () => {

@@ -146,7 +146,6 @@ describe('src/module/sw-order/component/sw-order-new-customer-modal', () => {
         wrapper = await createWrapper();
     });
 
-    // CHANGE REASON: This assertion targets the removable sw-tabs implementation already covered by Meteor-tab tests. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy new-customer tabs.
     it.deprecated('v6.8.0.0')('should render the fallback tabs branch while the major feature flag is inactive', () => {
         expect(wrapper.find('.sw-tabs').exists()).toBe(true);
@@ -246,7 +245,6 @@ describe('src/module/sw-order/component/sw-order-new-customer-modal', () => {
         });
     });
 
-    // CHANGE REASON: This assertion drives navigation through the removable sw-tabs implementation. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy new-customer tabs.
     it.deprecated('v6.8.0.0')('should navigate tab correctly', async () => {
         let customerBaseForm = wrapper.find('sw-customer-base-form-stub');
@@ -344,7 +342,6 @@ describe('src/module/sw-order/component/sw-order-new-customer-modal', () => {
         expect(context.languageId).toEqual(Shopware.Context.api.languageId);
     });
 
-    // CHANGE REASON: This assertion locates validation state through the removable sw-tabs implementation. @removed
     // @deprecated tag:v6.8.0.0 - The test will be removed with the legacy new-customer tabs.
     it.deprecated('v6.8.0.0')('should show error inside sw-tabs-item component', async () => {
         let swDetailsTab = wrapper.findAll('.sw-tabs-item').at(0);

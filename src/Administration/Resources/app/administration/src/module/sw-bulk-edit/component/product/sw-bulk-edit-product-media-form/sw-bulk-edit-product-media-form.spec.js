@@ -25,7 +25,6 @@ async function createWrapper() {
                     'sw-popover': await wrapTestComponent('sw-popover'),
                     // @deprecated tag:v6.8.0.0 - Remove this mock with sw-popover-deprecated.
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
-                    // CHANGE REASON: Preserve media action slots when the v6.8 popover uses mt-floating-ui. @harness
                     'mt-floating-ui': {
                         template: '<div><slot /></div>',
                     },

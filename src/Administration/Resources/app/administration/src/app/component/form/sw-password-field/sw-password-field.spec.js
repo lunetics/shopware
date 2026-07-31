@@ -18,7 +18,6 @@ async function createWrapper(additionalOptions = {}) {
 }
 
 describe('src/app/component/base/sw-password-field', () => {
-    // CHANGE REASON: The component always renders mt-password-field and no longer reads ENABLE_METEOR_COMPONENTS. @cleanup
     it('should render the mt-password-field', async () => {
         const wrapper = await createWrapper();
 
