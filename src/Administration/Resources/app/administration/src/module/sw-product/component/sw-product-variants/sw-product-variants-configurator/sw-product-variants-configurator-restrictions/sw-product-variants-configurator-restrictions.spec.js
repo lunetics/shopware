@@ -105,6 +105,10 @@ describe('components/base/sw-product-variants-configurator-restrictions', () => 
                     'sw-loader': true,
                     'sw-popover': await wrapTestComponent('sw-popover'),
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
+                    // CHANGE REASON: Preserve restriction-menu slots when the v6.8 popover uses mt-floating-ui. @harness
+                    'mt-floating-ui': {
+                        template: '<div><slot /></div>',
+                    },
                     'sw-data-grid': await wrapTestComponent('sw-data-grid'),
                     'sw-context-button': await wrapTestComponent('sw-context-button'),
                     'sw-context-menu': await wrapTestComponent('sw-context-menu'),

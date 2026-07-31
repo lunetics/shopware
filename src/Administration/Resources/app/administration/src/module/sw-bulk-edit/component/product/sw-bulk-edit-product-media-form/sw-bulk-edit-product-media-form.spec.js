@@ -24,6 +24,10 @@ async function createWrapper() {
                     'sw-product-media-form': true,
                     'sw-popover': await wrapTestComponent('sw-popover'),
                     'sw-popover-deprecated': await wrapTestComponent('sw-popover-deprecated', { sync: true }),
+                    // CHANGE REASON: Preserve media action slots when the v6.8 popover uses mt-floating-ui. @harness
+                    'mt-floating-ui': {
+                        template: '<div><slot /></div>',
+                    },
                     'sw-context-menu': await wrapTestComponent('sw-context-menu'),
                     'sw-context-menu-item': await wrapTestComponent('sw-context-menu-item'),
                     'sw-context-button': await wrapTestComponent('sw-context-button'),
